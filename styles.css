@@ -1,0 +1,121 @@
+:root {
+  --bg-1: #e8ddd0;
+  --bg-2: #c8d2ca;
+  --text: #20201d;
+  --muted: #686258;
+  --card: rgba(255, 252, 245, 0.78);
+  --border: rgba(55, 48, 40, 0.14);
+  --button: rgba(255, 255, 255, 0.68);
+  --button-hover: rgba(255, 255, 255, 0.92);
+  --accent: #6f4f37;
+  --shadow: 0 24px 80px rgba(46, 41, 35, 0.18);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(255,255,255,0.75), transparent 34rem),
+    linear-gradient(135deg, var(--bg-1), var(--bg-2));
+}
+
+.page-shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 32px 18px;
+}
+
+.card {
+  width: min(100%, 480px);
+  padding: 34px 24px 24px;
+  border: 1px solid var(--border);
+  border-radius: 32px;
+  background: var(--card);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(20px);
+  text-align: center;
+}
+
+.avatar {
+  width: 86px;
+  height: 86px;
+  margin: 0 auto 18px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #7a5d43, #2e3c35);
+  color: #fffaf1;
+  font-weight: 750;
+  font-size: 1.7rem;
+  letter-spacing: 0.04em;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 7vw, 2.6rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.tagline {
+  max-width: 34ch;
+  margin: 14px auto 26px;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.links {
+  display: grid;
+  gap: 12px;
+}
+
+.link-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 56px;
+  padding: 0 18px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--button);
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 650;
+  transition: transform 150ms ease, background 150ms ease, border-color 150ms ease;
+}
+
+.link-button:hover,
+.link-button:focus-visible {
+  transform: translateY(-2px);
+  background: var(--button-hover);
+  border-color: rgba(55, 48, 40, 0.28);
+  outline: none;
+}
+
+.link-button.primary {
+  background: var(--accent);
+  color: #fffaf1;
+  border-color: transparent;
+}
+
+.arrow {
+  opacity: 0.72;
+}
+
+.note {
+  margin: 22px 0 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+code {
+  padding: 0.1em 0.35em;
+  border-radius: 0.45em;
+  background: rgba(111, 79, 55, 0.12);
+}
